@@ -42,7 +42,13 @@ h1 {
   margin-top: -260px;
 }
 
-.menu, .header, .nav-top {
+.menu {
+  /*margin-bottom: 0;*/
+  position: relative;
+  z-index: 10;
+}
+
+.header, .nav-top {
   margin-bottom: 0;
   position: relative;
   z-index: 10;

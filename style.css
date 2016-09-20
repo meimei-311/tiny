@@ -48,7 +48,25 @@ Tags: 标签，多个用半角逗号隔开
 	/*background-image: url('img/dot.png');*/
 }
 
-
+.total{
+	width:100px;
+	position:relative;	
+	color:white;
+	font-size: 20px;
+	font-family: "SimHei";
+	display:inline;
+}
+.total-txt{
+	/*padding-left:42%;*/
+}
+#total-num{
+	color: #6CB670;	
+	font-weight: 800;
+	font-size: 35px;
+	/*font-family: oswald;*/
+	font-family: 黑体;
+	line-height: 1.1;
+}
 
 .sub-content ul{
 	list-style:none;

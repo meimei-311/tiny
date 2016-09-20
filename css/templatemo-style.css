@@ -1,8 +1,7 @@
 
 body {
 	color: #0f0f0f;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;	
 	font-weight: 300;
 	overflow-x: hidden;
 }
@@ -41,7 +40,10 @@ h2 { font-size: 2.2rem; }
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	height: 100px;
+	/*height: 145px;*/
+}
+.tm-header a{
+	text-decoration:none;
 }
 
 .tm-site-name {
@@ -74,32 +76,12 @@ h2 { font-size: 2.2rem; }
 	padding-bottom: 100px;
 }
 
-.tm-home-img-container {
-	background-image: url('../img/tm-home-img.jpg');
-	background-size: auto;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 500px;
-}
-
-.tm-about-img-container { background-image: url('../img/tm-about-img.jpg');	}
-.tm-blog-img-container { background-image: url('../img/tm-blog-img.jpg'); }
-.tm-contact-img-container { background-image: url('../img/tm-contact-img.jpg'); }
-
-.tm-about-img-container,
-.tm-blog-img-container,
-.tm-contact-img-container {
-	background-size: auto 200px;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 200px;
-}
-
 
 .wp-upload-file{
 	position:absolute;
 	margin-top: 5%;
-	margin-left:40%;margin-right:60%;
+	margin-left:43%;
+	margin-right:60%;
 }
 #upload-file{
 	opacity:0;

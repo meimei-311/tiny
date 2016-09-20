@@ -1,5 +1,6 @@
 <?php
 
+
 function search_md5($md5){
 	global $wpdb;
 	$table='wp_madapi_apkinfo';	
@@ -32,7 +33,10 @@ function search_md5($md5){
 
 		echo '<tr>';
 		echo '<td class="ev_row" style="width:20%">文件名称:</td>';
-		echo "<td style='width:80%'><p>".$res->apkname."</p></td>";
+		echo "<td style='width:80%'><p>".$res->apk_name;
+		$home_url = home_url();
+		echo '<img src="'.$home_url.'/MAD-API/icon/'.$res->md5.'.png" width="60px" height="60px" style="position:absolute;right:50%;"></img>';
+		echo "</p></td>";
 		echo '</tr>';
 		
 		echo '<tr>';
@@ -54,6 +58,11 @@ function search_md5($md5){
 		echo '<tr>';
 		echo '<td class="ev_row" style="width:20%">size:</td>';
 		echo "<td style='width:80%'><p>".$res->size."M</p></td>";
+		echo '</tr>';
+
+		echo '<tr>';
+		echo '<td class="ev_row" style="width:20%">upload_time:</td>';
+		echo "<td style='width:80%'><p>".$res->upload_time."</p></td>";
 		echo '</tr>';
 
 		echo '</tbody></table>';

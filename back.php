@@ -1,158 +1,163 @@
 <!DOCTYPE html>
 <html lang="en" class="demo2 no-js">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Make your website scroll one page at a time with OnePageScroll.js </title>
-		<meta name="description" content="The plugin will detect your mouse wheel and swipe gestures to determine which way the page should scroll." />
-		<meta name="keywords" content="scroller, jquery one page scroll, onepagescroll, animated scrolling" />
-		<meta name="author" content="Author for Onextrapixel" />
-		<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+	
+            <?php wp_head(); ?>
+            <title>
+            <?php if ( is_home() ) {
+                bloginfo('name'); echo " - "; bloginfo('description');
+            } elseif ( is_category() ) {
+                single_cat_title(); echo " - "; bloginfo('name');
+            } elseif (is_single() || is_page() ) {
+                single_post_title();
+            } elseif (is_search() ) {
+                echo "搜索结果"; echo " - "; bloginfo('name');
+            } elseif (is_404() ) {
+                echo '页面未找到!';
+            } else {
+                wp_title('find-non-title',true);
+            } ?>    
+            </title>
+            <?php   
+                global $current_user, $display_name , $user_email;
+                get_currentuserinfo();
+            ?>
+
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/background/default.css" />
 		
 		<!-- Edit Below -->
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
+	    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.js"></script>
 	    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/background/jquery.onepage-scroll.js"></script>
 	    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/background/style.css" />
 	    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/background/onepage-scroll.css" />
 	    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/background/elusive-webfont.css" />
-	    <script src="../file/js/modernizr.js"></script>
+
+                <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+                <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
+                <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/templatemo-style.css" type="text/css" media="screen" />
+
 </head>
+
+    <script type="text/javascript">
+    function EnterPress(e){ //传入 event
+        var e = e || window.event;
+        if(e.keyCode == 13){ 
+            var a = document.getElementById("header_hash").value;
+            b = a.replace(/(^\s*)|(\s*$)/g, "");            
+            regex = /^[a-z0-9]{32}$/;
+            if (!regex.test(b)){
+                alert("输入的MD5格式不正确！");
+            }else if (b==""){
+                alert("输入不能为空");
+            }else{
+                window.location.href="<?php echo home_url();?>"+"/index.php/search/?md5="+b;
+            }           
+        }
+    } 
+
+    function fileSelect(){
+        document.getElementById("file-upload").click(); 
+    }
+    function fileSelected(){
+        document.getElementById('upload-form').submit();        
+    }
+    </script>
 
 <body class="demo2">
 	
   
 	<div class="header">
-		<h1>Scroll website one page at a time<br>with OnePageScroll.js: Bounce Effect</h1>
-	</div>
+		<!-- <h1>Scroll website one page at a time<br>with OnePageScroll.js: Bounce Effect</h1> -->
+            <div class="tm-header">
+              <div class="container-fluid">
+                <div class="tm-header-inner">
+                    <a href="<?php echo get_option('home'); ?>" class="navbar-brand tm-site-name"><?php bloginfo('name'); ?></a>
+                    
+                    <!-- navbar -->
+                    <nav class="navbar tm-main-nav">
+                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="<?php echo get_option('home'); ?>" class="nav-link">首页</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="about.html" class="nav-link">热点报告</a>
+                                </li>
+                                <li class="nav-item">                  
+                                <div class="search_tab"> </div>                
+                                <div class="search_content">
+                                <input type="text" name="md5" id="header_hash" value="请输入MD5搜索已有报告" 
+                                onfocus="if(this.value == '')this.value='请输入MD5搜索已有报告';" 
+                                onclick="if(this.value == '请输入MD5搜索已有报告')this.value='';" 
+                                onblur="if (value=='') {value='请输入MD5搜索已有报告'}" 
+                                onkeypress="EnterPress(event)" onkeydown="EnterPress()" /></div>
+                                </li>
+                                
+                            <?php 
+                                if($current_user->ID != 0){  
+                                    echo '<li class="nav-item">';
+                                    echo '<div class="search_tab"> </div> ';
+                                    echo '<a>'.$current_user->display_name."</a>";   //mei可链接到该用户曾经检测过的文件列表。
+                                    echo '</li>';
+                                }else{
+                                    echo '<li class="nav-item"><div id="user_login">';
+                                    wp_loginout();
+                                    echo '</div></li>';
+                                }                       
+                            ?>                          
+
+                            </ul>                        
+                        </div>                        
+                    </nav>  
+                </div>                                  
+            </div>            
+        </div>
+
+
+	</div> <!--end of header -->
   
 	<div class="menu">
-		<a href="index.html">Demo 1</a>
+
+     		<!-- <a href="index.html">Demo 1</a>
 		<a class="active" href="back.php">Demo 2</a>
-		<a href="index3.html">Demo 3</a>
+		<a href="index3.html">Demo 3</a> -->
 	</div>
 	
 <div class="main">
 
 	  <section class="page1">
 
-	  	<!DOCTYPE html>
-
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="rank" style="height:400px"></div>
-    <!-- ECharts单文件引入 -->
-    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-    <script type="text/javascript">
-        // 路径配置
-        require.config({
-            paths: {
-                echarts: 'http://echarts.baidu.com/build/dist'
-            }
-        });
-        
-        // 使用
-        require(
-            [
-                'echarts',
-                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
-            ],
-            function (ec) {
-                // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('rank')); 
-                
-                var option = {
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
-    },
-    legend: {
-        data: ['直接访问', '邮件营销','联盟广告','视频广告','搜索引擎']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis:  {
-        type: 'value'
-    },
-    yAxis: {
-        type: 'category',
-        data: ['周一','周二','周三','周四','周五','周六','周日']
-    },
-    series: [
-        {
-            name: '直接访问',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [320, 302, 301, 334, 390, 330, 320]
-        },
-        {
-            name: '邮件营销',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [120, 132, 101, 134, 90, 230, 210]
-        },
-        {
-            name: '联盟广告',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [220, 182, 191, 234, 290, 330, 310]
-        },
-        {
-            name: '视频广告',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [150, 212, 201, 154, 190, 330, 410]
-        },
-        {
-            name: '搜索引擎',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [820, 832, 901, 934, 1290, 1330, 1320]
-        }
-    ]
-};
-        
-                // 为echarts对象加载数据 
-                myChart.setOption(option); 
-            }
-        );
-    </script>
-
+	             <!--        upload file -->             
+                <div class="page_container">
+                <img class="normalFace" src="<?php bloginfo('template_url'); ?>/img/upload.png" onclick="fileSelect();">
+                <form method="post" action="<?php echo home_url();?>/index.php/upload_file/" id="upload-form" enctype="multipart/form-data">   
+                    <input type="file" name="file" id="file-upload" onchange="fileSelected();" style="display:none;">
+                </form>               
+                <div class="total" >
+                <p class="total-txt">总共有<span id="total-num" >0</span>个报告</p>
+                </div> </div>
+                <script type="text/javascript">
+                //2秒内增长到data-to，数值除以12，间隔为160ms
+                var o = document.getElementById('total-num');
+                var total = parseInt(<?php
+                    global $wpdb;
+                    $table='wp_madapi_apkinfo';         
+                    $total_num = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table;",""));
+                    echo $total_num;
+                ?>);    
+                var step = (parseInt(total/12)==0?1:parseInt(total/12));    
+                var sh = window.setInterval(function (){    
+                    if (parseInt(o.innerHTML)+step > total){
+                        o.innerHTML = total;
+                        clearInterval(sh);
+                    }else{
+                        o.innerHTML=parseInt(o.innerHTML)+step;
+                    }   
+                },160);
+                </script> 
+                <!-- </div> -->
+                <!--       end of upload file -->	  	
 
     	</section>
 
@@ -178,5 +183,3 @@
 	    });
   	</script>
 		
-</body>
-</html>
