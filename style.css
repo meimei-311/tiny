@@ -1,0 +1,112 @@
+/*
+Theme Name: tiny
+Theme URI: 这里填主题介绍的网址，没有就填你的博客网址吧
+Description: 这里填主题的简短介绍
+Version: 版本号
+Author: 作者名
+Author URI: 作者的网址
+Tags: 标签，多个用半角逗号隔开
+*/
+
+#baseinfo{
+	position:absolute;
+	left: 20%;
+	margin-top: 50px;
+}
+
+.ev_left{
+	width:30%;
+	height: 40px;
+}
+.ev_right{
+	width: 70%;
+	height: 40px;	
+}
+.ev_row{
+	text-align:left;
+	vertical-align:top;
+}
+
+.tm-copyright-col{
+	position:fixed;
+	bottom:0;
+	left:30%;
+}
+.sub-content{
+	position:fixed;
+	right:10%;	
+	top:50%;
+}
+
+.set a:link ,a:visited, a:hover, a:active {
+	color: black;
+}
+
+.tree{
+	width: 11px;
+	height: 11px;
+	/*background-image: url('img/dot.png');*/
+}
+
+
+
+.sub-content ul{
+	list-style:none;
+	margin:0px;	
+}
+
+
+.search_content{			
+	width: 100%;
+	margin: auto;
+}
+
+.search_tab{
+	height: 6px;
+}
+#header_hash{	
+	border:1px solid #CCC;
+	-moz-box-shadow: inset 0 0 1px #CCC;
+ 	-webkit-box-shadow: inset 0 0 1px #CCC;
+ 	box-shadow: inset 0 0 1px #CCC;	
+}
+
+#user_login {
+	 padding: 10px 25px; 
+	 width: 100%;
+     	margin: auto;
+}
+.content_section{
+	position:fixed;
+	left:30%;
+}
+
+#user_upload_info{	
+	margin-top: 50px;
+	margin-left: 20%;
+}
+#user_upload_info td{
+	valign:center;
+}
+
+
+
+
+
+
+ .fileInputContainer{
+        height:66px;     
+        position:relative;
+        width: 220px;
+    }
+    .fileInput{
+        height:256px;
+        font-size: 300px;
+        position:absolute;
+        right:0;
+        top:0;
+        opacity: 0;
+        filter:alpha(opacity=0);
+        cursor:pointer;
+    }
+
