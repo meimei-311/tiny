@@ -60,6 +60,9 @@ function deal_mad_api($file_dir, $filename){
 		     	$version=$list[1];
 		 elseif ($list[0]=="icon_location")
 		 	$icon_location=$list[1];
+		 elseif ($list[0]=="application_name")
+		 	$application_name=$list[1];
+		 $sum_number=$number_deprecated+$number_hide+$number_removed;
 	 }
 	 fclose($handle);
 	 #echo $number_deprecated."***".$number_hide."***".$number_removed."***".$package_name."***".$version;
@@ -89,6 +92,8 @@ function deal_mad_api($file_dir, $filename){
 	'size' =>$size_apk,
 	'version' => $version,
 	'icon_location' => $icon_location,
+	'apk_label' => $application_name,
+	'sum_number' => $sum_number,
 	'number_deprecated' => $number_deprecated,
 	'number_hide' => $number_hide,
 	'number_removed' => $number_removed,
