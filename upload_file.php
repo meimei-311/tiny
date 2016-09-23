@@ -2,7 +2,7 @@
 /*
 Template Name:upload_file
 */
-get_header();
+get_header(1);
 
 ?>
 
@@ -130,7 +130,7 @@ if ($_FILES["file"]["type"] != "application/vnd.android.package-archive"){
 		}						
 	}
 
-	include_once('common.php');
+	include_once('search_md5.php');
 	search_md5($md5);
 } 
 
