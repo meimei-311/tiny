@@ -28,14 +28,13 @@ function arphabet_widgets_init() {
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
-
-
-/* 加载进度条插件js */
-function wpn_enqueue() {
- wp_enqueue_style( 'nprogresss', get_bloginfo('template_directory').'/css/nprogress.css' );
- wp_enqueue_script( 'nprogress', get_bloginfo('template_directory') . '/js/nprogress.js', array( 'jquery' ), '0.1.2', true );
- wp_enqueue_script( 'wp-nprogress',get_bloginfo('template_directory') . '/js/global.js', array( 'jquery', 'nprogress' ), '0.0.1', true );
+/*remove top admin bar */
+if (!current_user_can('manage_options')) {
+add_filter('show_admin_bar', '__return_false');
 }
  
-add_action( 'wp_enqueue_scripts', 'wpn_enqueue' );
+// add_action( 'wp_enqueue_scripts', 'wpn_enqueue' );
+
+/* 插件simple-local-avatars*/
+//require get_template_directory() . '/inc/simple-local-avatars.php';
 ?>
