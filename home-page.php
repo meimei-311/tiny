@@ -11,9 +11,10 @@ Template Name: 首页
 
 <?php
 // include_once("header-page.php");
-include_once("chart.php");
+// include_once("chart.php");
+include_once("timeline.php");
 
-//get_footer();
+// get_footer();
 
  ?> 
 
