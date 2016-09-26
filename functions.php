@@ -111,6 +111,20 @@ add_filter('show_admin_bar', '__return_false');
 //require get_template_directory() . '/inc/simple-local-avatars.php';
 
 
+/*set timezone*/
 date_default_timezone_set('Asia/Shanghai');
+
+
+/*set login logo */
+function custom_loginlogo() {
+	echo'<style type="text/css"> h1 a {background-image: url('.get_bloginfo('template_directory').'/img/logo_login.png) !important; } </style>';
+}
+add_action('login_head', 'custom_loginlogo');
+
+/* set login link url*/
+function custom_loginlogo_url($url) {
+	return home_url(); //在此输入你需要链接到的URL地址
+}
+add_filter( 'login_headerurl', 'custom_loginlogo_url');
 
 ?>
