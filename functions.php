@@ -109,4 +109,8 @@ add_filter('show_admin_bar', '__return_false');
 
 /* 插件simple-local-avatars*/
 //require get_template_directory() . '/inc/simple-local-avatars.php';
+
+
+date_default_timezone_set('Asia/Shanghai');
+
 ?>
