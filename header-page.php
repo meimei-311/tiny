@@ -91,16 +91,16 @@
                 <script type="text/javascript">
                 //2秒内增长到data-to，数值除以12，间隔为160ms
                 var o = document.getElementById('total-num');
-                var total = parseInt(<?php
+                var total_n = parseInt(<?php
                     global $wpdb;
                     $table='wp_madapi_apkinfo';         
                     $total_num = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table;",""));
                     echo $total_num;
                 ?>);    
-                var step = (parseInt(total/12)==0?1:parseInt(total/12));    
+                var step = (parseInt(total_n/12)==0?1:parseInt(total_n/12));
                 var sh = window.setInterval(function (){    
-                    if (parseInt(o.innerHTML)+step > total){
-                        o.innerHTML = total;
+                    if (parseInt(o.innerHTML)+step > total_n){
+                        o.innerHTML = total_n;
                         clearInterval(sh);
                     }else{
                         o.innerHTML=parseInt(o.innerHTML)+step;
