@@ -1,0 +1,63 @@
+/*page fenye*/
+p{margin:0}  
+#showPage{
+    height: 60px;
+}
+#page{  
+    height:40px;  
+    padding:20px 0px;  
+    padding-left: 18%;
+}  
+#page a{  
+    display:block;  
+    float:left;  
+    margin-right:10px;  
+    padding:2px 12px;  
+    height:24px;  
+    border:0px #cccccc solid;  
+    background:rgba(255, 255, 255, 0.3);  
+    text-decoration:none;  
+    color:#fff;  
+    font-size:12px;  
+    line-height:24px;  
+}  
+#page a:hover{  
+    color:#077ee3;  
+    border:1px #077ee3 solid;  
+}  
+#page a.cur{  
+    border:none;  
+    background:#077ee3;  
+    color:#fff;  
+}  
+#page p{  
+    float:left;  
+    padding:2px 12px;  
+    font-size:12px;  
+    height:24px;  
+    line-height:24px;  
+    color:#fff;  
+    border:0px #ccc solid;  
+    background:rgba(255, 255, 255, 0.2);  
+    margin-right:8px;  
+
+}  
+#page p.pageRemark{  
+    border-style:none;  
+    background:none;  
+    margin-right:0px;  
+    padding:4px 0px;  
+    color:#fff;  
+}  
+#page p.pageRemark b{  
+    color:white;  
+}  
+#page p.pageEllipsis{  
+    border-style:none;  
+    background:none;  
+    padding:4px 0px;  
+    color:#808080;  
+}
+
+
+/*end page fenye*/
