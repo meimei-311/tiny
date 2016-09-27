@@ -13,6 +13,11 @@
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/templatemo-style.css" type="text/css" media="screen" />
 
+            <!-- chart -->
+            <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script>
+            <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>
+            <!--end chart -->
+
 
     <script type="text/javascript">
     function fileSelect(){
@@ -21,59 +26,19 @@
     function fileSelected(){
         document.getElementById('upload-form').submit();        
     }
+
+   document.onscroll=function()
+  {
+      var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+      var cHeight=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
+       var oDiv=document.getElementById('main_chart');
+      if(scrollTop>(oDiv.offsetTop-cHeight))
+       load_chart();
+  }
     </script>
 
 
-         <!--    <div class="tm-header">
-              <div class="container-fluid">
-                <div class="tm-header-inner">
-                    <a href="<?php echo get_option('home'); ?>" class="navbar-brand tm-site-name"><?php bloginfo('name'); ?></a> -->
-                    
-                    <!-- navbar -->
-                    <!-- <nav class="navbar tm-main-nav">
-                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item">
-                                    <a href="<?php echo get_option('home'); ?>" class="nav-link">首页</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="about.html" class="nav-link">热点报告</a>
-                                </li>
-                                <li class="nav-item">                  
-                                <div class="search_tab"> </div>                
-                                <div class="search_content">
-                                <input type="text" name="md5" id="header_hash" value="请输入MD5搜索已有报告" 
-                                onfocus="if(this.value == '')this.value='请输入MD5搜索已有报告';" 
-                                onclick="if(this.value == '请输入MD5搜索已有报告')this.value='';" 
-                                onblur="if (value=='') {value='请输入MD5搜索已有报告'}" 
-                                onkeypress="EnterPress(event)" onkeydown="EnterPress()" /></div>
-                                </li>
-                                
-                            <?php 
-                                if($current_user->ID != 0){  
-                                    echo '<li class="nav-item">';
-                                    echo '<div class="search_tab"> </div> ';
-                                    echo '<a>'.$current_user->display_name."</a>";   //mei可链接到该用户曾经检测过的文件列表。                                  
-                                    echo '</li>';
-                                }else{
-                                    echo '<li class="nav-item"><div id="user_login">';
-                                    wp_loginout();
-                                    echo '</div></li>';
-                                }                       
-                            ?>                          
 
-                            </ul>                        
-                        </div>                        
-                    </nav>  
-                </div>                                  
-            </div>            
-        </div>
-
-
-	</div>
-  
-	<div class="menu">
-	</div> -->
 
 <div class="main">
 
@@ -113,10 +78,15 @@
 
     <section class="page2">
       <div class="page_container">
-        <h1>iPhone 5S</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-      </div>
+ <!--      <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script> -->
+           <div id="main_chart" style="height:500px;width:1400px;"></div>
+        </div> 
+        <script type="text/javascript">
+              load_chart();
+        </script>
+
     </section>
+
 
     <section class="page3">
       <div class="page_container">
@@ -126,6 +96,7 @@
     </section>
 
 </div> 
+<!--           <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>  -->
 	<script type="text/javascript">
 	    $(".main").onepage_scroll({
 	      sectionContainer: "section",
