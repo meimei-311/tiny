@@ -10,7 +10,7 @@ body {
 	font-size: 14px;
 }
 a {
-	color: #ffffcc;
+	color: #549688;
 	text-decoration: none;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -22,23 +22,23 @@ a:hover,  a.selected {
 	color: #ffcc00;
 }
 h1, h2, h4, h5, h6 {
-	text-align: center;
+	text-align: left;
 	color: #ccc;
 	text-shadow: #000 1px 1px 2px;
 	margin-bottom: 5px;
 }
 h1 {
-	font-size: 18px;
+	font-size: 14px;
 }
 h2 {
-	font-size: 14px;
+	font-size: 12px;
 }
 .sociales {
 	text-align: center;
 	margin-bottom: 20px;
 }
 #lrzj_x {
-	width: 800px;
+	width: 1000px;
 	height: 350px;
 	overflow: hidden;
 	margin: 100px auto;
@@ -47,8 +47,12 @@ h2 {
 }
 #dates {
 	width: 800px;
-	height: 60px;
+	height: 80px;
 	overflow: hidden;
+	/*margin-left: 50px ! important ;*/
+	/*margin-right: 50px ! important ;*/
+	margin-top: 14px ! important ;
+
 }
 /* 代码整理：懒人之家 www.lanrenzhijia.com  转载请注明出处 */
 #dates li {
@@ -56,36 +60,37 @@ h2 {
 	float: left;
 	width: 100px;
 	height: 50px;
-	font-size: 24px;
+	font-size: 15px;
 	text-align: center;
 	background: url('../timeline/biggerdot.png') center bottom no-repeat;
 }
 #dates a {
 	line-height: 38px;
-	padding-bottom: 10px;
+	/*padding-bottom: 10px;*/
 }
 #dates .selected {
-	font-size: 38px;
+	font-size: 20px;
 }
 #lrzj_line {
-	width: 800px;
+	width: 1000px;
 	height: 350px;
 	overflow: hidden;
 }
 #lrzj_line li {
-	width: 800px;
+	width: 1000px;
 	height: 350px;
 	list-style: none;
 	float: left;
 }
 #lrzj_line li img {
 	float: left;
-	margin: 10px 30px 10px 50px;
+	margin: 20px 30px 50px 80px;
 }
 #lrzj_line li h1 {
-	color: #ffcc00;
-	font-size: 48px;
-	margin: 20px 0;
+	color: #549688;
+	font-size: 30px;
+	/*margin: 20px 0;*/
+	margin-top: 20px;
 	text-shadow: #000 1px 1px 2px;
 }
 #lrzj_line li p {
@@ -95,7 +100,7 @@ h2 {
 	line-height: 22px;
 	text-shadow: #000 1px 1px 2px;
 }
-#grad_left,  #grad_right {
+#grad_left,  #grad_right {:;
 	width: 100px;
 	height: 350px;
 	position: absolute;
@@ -113,7 +118,7 @@ h2 {
 	position: absolute;
 	top: 0;
 	font-size: 70px;
-	top: 170px;
+	top: 140px;
 	width: 22px;
 	height: 38px;
 	background-position: 0 0;
