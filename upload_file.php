@@ -78,10 +78,10 @@ function deal_mad_api($file_dir, $filename){
 
 	 /*添加新的字段*/
 	 $time = date('y-m-d h:i:s',time());
-	 echo "------------time---".$time;
+	 // echo "------------time---".$time;
 	 global $current_user;
 	 get_currentuserinfo();
-	 echo "-----------userid----".$current_user->ID;
+	 // echo "-----------userid----".$current_user->ID;
 
 
 	$table = "wp_madapi_apkinfo";

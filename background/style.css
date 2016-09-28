@@ -60,11 +60,12 @@ background: #7f8c8d;
 
 .main section.page1 .page_container {
   position: absolute;
-  bottom: 0;
-  margin-left: -325px;
-  left: 50%;
-  margin-bottom: 50px;
-  max-width: 650px;
+  margin-top: 70px;
+  /*bottom: 0;*/
+  /*margin-left: -325px;*/
+  /*left: 50%;*/
+  /*margin-bottom: 50px;*/
+  /*max-width: 650px;*/
 }
 
 .main section.page1 .page_container h1 {
