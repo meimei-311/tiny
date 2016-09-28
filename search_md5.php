@@ -26,5 +26,6 @@ function search_md5($md5){
  $test_post = $_GET['md5'];
 search_md5($test_post);
 
+get_footer();
 ?>
 

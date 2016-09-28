@@ -27,11 +27,11 @@ Tags: 标签，多个用半角逗号隔开
 	vertical-align:top;
 }
 
-.tm-copyright-col{
+/*.tm-copyright-col{
 	position:fixed;
 	bottom:0;
 	left:30%;
-}
+}*/
 .sub-content{
 	position:fixed;
 	right:10%;	

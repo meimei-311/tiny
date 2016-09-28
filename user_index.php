@@ -65,7 +65,7 @@ function user_upload_search($userid){
                 $page = new page($total, $showrow, $curpage, $url, 2);  
                 echo $page->myde_write();  
             }  
-             echo  '</div> ';
+             echo  '</div></section> ';
 }
 
 $current_user = wp_get_current_user();
