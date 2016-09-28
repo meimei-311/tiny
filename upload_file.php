@@ -2,7 +2,7 @@
 /*
 Template Name:upload_file
 */
-get_header(1);
+get_header(2);
 
 ?>
 

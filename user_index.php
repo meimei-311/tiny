@@ -2,7 +2,7 @@
 /*
 Template Name:user_index
 */
-get_header(1);
+get_header(2);
 
 require_once('page.class.php'); //分页类
 require_once("sidebar.php");

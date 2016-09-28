@@ -3,7 +3,7 @@
 Template Name:search_md5
 */
 
-get_header(1);
+get_header(2);
 ?>
 
 
