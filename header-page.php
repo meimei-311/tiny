@@ -13,6 +13,10 @@
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/templatemo-style.css" type="text/css" media="screen" />
 
+ 	<!--timeline-->
+            <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/timeline/lrzj_x.css" type="text/css" />
+            <!--timeline-->
+            
             <!-- chart -->
             <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script>
             <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>
@@ -23,6 +27,7 @@
             <!--endupload-->
 
 
+
     <script type="text/javascript">
     function fileSelect(){
         document.getElementById("file-upload").click(); 
@@ -30,15 +35,6 @@
     function fileSelected(){
         document.getElementById('upload-form').submit();        
     }
-
-   document.onscroll=function()
-  {
-      var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-      var cHeight=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
-       var oDiv=document.getElementById('main_chart');
-      if(scrollTop>(oDiv.offsetTop-cHeight))
-       load_chart();
-  }
     </script>
 
 
@@ -100,7 +96,6 @@
 
     <section class="page2" style="top:100%;">
       <div class="page_container">
- <!--      <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script> -->
            <div id="main_chart" style="height:500px;width:1400px;"></div>
         </div> 
         <script type="text/javascript">
@@ -112,12 +107,13 @@
 
     <section class="page3" style="top:200%;">
       <div class="page_container">
-
+      <div class="time_line">
+      <?php include_once("timeline.php");?>
+      </div>
     </div>
     </section>
 
 </div> 
-<!--           <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>  -->
 	<script type="text/javascript">
 	    $(".main").onepage_scroll({
 	      sectionContainer: "section",

@@ -135,11 +135,12 @@ body.viewing-page-2 .header h1, body.viewing-page-2 .nav-top span.right a {
 
 .main section.page3 .page_container {
   position: absolute;
-  margin-left: -325px;
-  left: 50%;
-  top: 40%;
+  /*margin-left: -325px;*/
+  padding-left: 20%;
+  padding-top: 15%;
+  /*top: 40%;*/
   margin-bottom: 50px;
-  max-width: 650px;
+  /*max-width: 650px;*/
 }
 
 .main section.page3 .page_container h1 {

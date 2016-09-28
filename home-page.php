@@ -15,7 +15,7 @@ include_once("header-page.php");
 // include_once("timeline.php");
 // include_once("pour_out.php");
 
-get_footer();
+// get_footer();
 
  ?> 
 
