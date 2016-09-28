@@ -90,8 +90,8 @@ select[multiple],select[size]{height:auto}input[type=file]:focus,input[type=radi
 @keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
 .progress{
 	overflow:hidden;
-	height:15px;
-	margin-bottom:20px;
+	height:16px;
+	margin-bottom:8px;
 	background:rgba(0,0,0,0);
 	border-radius:2px;
 	

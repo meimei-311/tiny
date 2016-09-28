@@ -121,6 +121,9 @@ img {
     margin-bottom: 15px;
 }
 
+.s-widget-body{
+    padding-left: 5px;
+}
 .tile-title {
     font-size: 17px;
     /*text-transform: uppercase;*/

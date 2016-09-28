@@ -43,29 +43,32 @@ function user_upload_search($userid){
 		echo '<table border="0" cellpadding="0" cellspacing="0" width="80%" class="table tile">';
 		echo '<thead>';
 		echo '<tr>';
-		echo '<th class="ev_row" width="30%" >文件名称</th>';
+		echo '<th class="ev_row" width="30%" >应用名称</th>';
 		echo '<th class="ev_row" width="30%"  >文件MD5值</th>';
-		echo '<th class="ev_row" width="20%" >上传时间</th>';
-		echo '<th class="ev_row" width="20%" style="text-align: right;">分析报告</th>';
+		echo '<th class="ev_row" width="30%" >上传时间</th>';
+		echo '<th class="ev_row" width="10%" style="text-align: right;">分析报告</th>';
 		echo '<tbody>';
 
 		foreach ($res as $row){	
 			echo '<tr>';
-			echo "<td align='left' ><p>".$row->apk_name."</p></td>";
+			echo "<td align='left' ><p>".$row->apk_label."</p></td>";
 			echo "<td align='center' ><p>".$row->md5."</p></td>";
 			echo "<td align='center' ><p>".$row->upload_time."</p></td>";
 			echo "<td align='right' ><a href='index.php/search/?md5=".$row->md5."'>查看报告</a></td>";
 			echo '</tr>';		
 		}
-		echo '</tbody></table></div></div></div></div></div></div>';
-	}	
-	echo '<div class="showPage">';
+		echo '</tbody></table></div>';
+		echo '<div class="showPage">';
                        
-            if ($total > $showrow) {//总记录数大于每页显示数，显示分页  
-                $page = new page($total, $showrow, $curpage, $url, 2);  
-                echo $page->myde_write();  
-            }  
-             echo  '</div></section> ';
+		if ($total > $showrow) {//总记录数大于每页显示数，显示分页  
+		    $page = new page($total, $showrow, $curpage, $url, 2);  
+		    echo $page->myde_write();  
+		}  
+		echo '</div>';
+		echo '</div></div></div></div></div>';
+	}	
+
+             echo  '</section> ';
 }
 
 $current_user = wp_get_current_user();

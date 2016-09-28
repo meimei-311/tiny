@@ -13,9 +13,9 @@
   $res = $wpdb->get_results($query);
   // $res = $wpdb->get_row($query);
 ?>
+                <!-- widgets-->
                 <div class="side-widgets overflow">  
-                    <div class="block-side">  </div>
-                    <!-- Projects -->
+                  <!-- Most Active Contributors-->
                     <div class="s-widget m-b-25">
                         <h2 class="tile-title">
                             Most Active Contributors
@@ -32,7 +32,7 @@
                           echo $row->display_name;
                           echo '</small>';
 
-                          echo '<div class="progress progress-small"><a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: ';
+                          echo '<div class="progress progress-small"><a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-success" style="width: ';
                           if ($base_num == 0){
                             $base_num = $row->zz;
                             echo 60;
@@ -44,52 +44,39 @@
                           echo 'commits</p></div></div>';
                         }
                         ?> 
-                            <!-- <div class="side-border">
-                                <small><?php  echo $res->display_name;?></small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 70%;" data-original-title="20%">
-                                       </a><p style="font-size:0.8em; "> 255 commits</p>
-                                     
-                                </div>
-                            </div>
-
-                            <div class="side-border">
-                                <small>Opencart E-Commerce Website</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-info" style="width: 43%;" data-original-title="43%">
-                                          <span class="sr-only">43% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-                            <div class="side-border">
-                                <small>Social Media API</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-warning" style="width: 81%;" data-original-title="81%">
-                                          <span class="sr-only">81% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-                            <div class="side-border">
-                                <small>VB.Net Software Package</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 10%;" data-original-title="10%">
-                                          <span class="sr-only">10% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-                            <div class="side-border">
-                                <small>Chrome Extension</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 95%;" data-original-title="95%">
-                                          <span class="sr-only">95% Complete</span>
-                                     </a>
-                                </div>
-                            </div> -->
+                           
 
                         </div>
                     </div>
+              
+                <!-- end -->
+
+
+<?php
+$new_upload_sql="select a.apk_label,a.upload_time, a.user_id ,b.display_name 
+FROM $table a, $user_table b  WHERE a.user_id=b.id order by upload_time desc limit 10;";
+
+$new_res = $wpdb->get_results($new_upload_sql);
+  ?>
+                <!-- new upload -->
+                    <div class="s-widget m-b-25" style="padding-top:18px;">
+                        <h2 class="tile-title" >
+                            Most Recent Commits
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                    <?php                       
+                        foreach ($new_res as $new_row){                          
+                          echo '<div class="side-border"><div style="float:left;margin-right: 3px;">';
+                          echo get_avatar($new_row->user_id, 40);
+                          echo '</div><small>'.$new_row->display_name.' On '.$new_row->upload_time.'</small>';
+                          echo '<p style="font-size:0.8em;margin-bottom:8px;">commit '.$new_row->apk_label;                          
+                          echo '</p></div>';
+                        }
+                        ?> 
+                        </div>
+                    </div>
                 </div>
-                
                
         <script src="<?php bloginfo('template_url'); ?>/widgets/jquery.min.js"></script> <!-- jQuery Library -->      
         <script src="<?php bloginfo('template_url'); ?>/widgets/scroll.min.js"></script> <!-- Custom Scrollbar -->
