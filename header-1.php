@@ -49,7 +49,9 @@
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<a href="<?php echo home_url();?>"> <?php bloginfo('name');?></a>
+					<a href="<?php echo home_url();?>"> 
+						<img src="<?php bloginfo('template_url'); ?>/background/mad-api.png">
+					</a>
 				</div>
 				<div class="icons">
 					<ul>
