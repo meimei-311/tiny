@@ -42,7 +42,7 @@
 
 <div class="main">
 
-	  <section class="page1">
+	  <section class="page1" style="top:13.5%;">
         
 	                   
                 <div class="page_container">
@@ -76,7 +76,7 @@
 
     	</section>
 
-    <section class="page2">
+    <section class="page2" style="top:113.5%;">
       <div class="page_container">
  <!--      <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script> -->
            <div id="main_chart" style="height:500px;width:1400px;"></div>
@@ -88,7 +88,7 @@
     </section>
 
 
-    <section class="page3">
+    <section class="page3" style="top:213.5%;">
       <div class="page_container">
         <h1>Pretty cool eh?</h1>
         <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>

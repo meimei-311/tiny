@@ -173,8 +173,8 @@
     el.addClass("onepage-wrapper").css("position","relative");
     $.each( sections, function(i) {
       $(this).css({
-        position: "absolute",
-        top: topPos + "%"
+        position: "absolute"
+        // top: topPos + "%"
       }).addClass("section").attr("data-index", i+1);
       topPos = topPos + 100;
       if(settings.pagination == true) {
