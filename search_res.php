@@ -40,6 +40,8 @@
                                                         <td><?php  echo $res->size;?></td>
                                                     </tr>                                                   
                                                     <tr>
+                                                        <td>应用名称：</td>
+                                                        <td><?php  echo $res->apk_label;?></td>
                                                         <td>图标：</td>
                                                         <td><img  width="50" src="<?php echo home_url();?>/MAD-API/icon/<?php echo $res->md5;?>.png" alt=""></td>
                                                     </tr>
@@ -167,5 +169,3 @@
         <script src="<?php bloginfo('template_url'); ?>/search-res/easypiechart.js"></script><!-- EasyPieChart - Animated Pie Charts -->
         <script src="<?php bloginfo('template_url'); ?>/search-res/charts.js"></script> <!-- All the above chart related functions -->
     
-    </body>
-</html>

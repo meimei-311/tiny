@@ -8,6 +8,8 @@ get_header(1);
 
 
 <?php 
+require_once("sidebar.php");
+
 function search_md5($md5){
     global $wpdb;
     $table='wp_madapi_apkinfo'; 

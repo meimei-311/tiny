@@ -1,0 +1,24 @@
+.side-widgets {
+	margin-left: 30px;
+	margin-top: 30px;
+	width: 300px;
+	float: left;
+	position: relative;
+}
+#block-side{
+	position: relative;
+	height: 20px;
+}
+@media (min-width: 1200px) {
+    /* Sidebar */
+    .side-widgets .profile-pic:hover {
+        -webkit-animation-name: tada;
+        animation-name: tada;
+    }
+    
+    /* List views */
+    .sortable.todo-list .media {
+        padding-left: 20px;
+        background: url(../img/sort.png) no-repeat 8px 11px;
+    }
+}

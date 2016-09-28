@@ -107,8 +107,8 @@ add_filter('show_admin_bar', '__return_false');
  
 // add_action( 'wp_enqueue_scripts', 'wpn_enqueue' );
 
-/* 插件simple-local-avatars*/
-//require get_template_directory() . '/inc/simple-local-avatars.php';
+/* 插件simple-local-avatars user img*/
+require get_template_directory() . '/inc/simple-local-avatars.php';
 
 
 /*set timezone*/

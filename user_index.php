@@ -5,6 +5,7 @@ Template Name:user_index
 get_header(1);
 
 require_once('page.class.php'); //分页类
+require_once("sidebar.php");
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/search-res/page.css" />
@@ -42,8 +43,8 @@ function user_upload_search($userid){
 		echo '<table border="0" cellpadding="0" cellspacing="0" width="80%" class="table tile">';
 		echo '<thead>';
 		echo '<tr>';
-		echo '<th class="ev_row" width="20%" >文件名称</th>';
-		echo '<th class="ev_row" width="20%"  >文件MD5值</th>';
+		echo '<th class="ev_row" width="30%" >文件名称</th>';
+		echo '<th class="ev_row" width="30%"  >文件MD5值</th>';
 		echo '<th class="ev_row" width="20%" >上传时间</th>';
 		echo '<th class="ev_row" width="20%" style="text-align: right;">分析报告</th>';
 		echo '<tbody>';
