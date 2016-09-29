@@ -41,7 +41,8 @@
 	get_currentuserinfo();
 ?>
 
-<body class="demo2">
+<body>
+<div class="view-body">
 
 	<!-- banner -->
 	<div class="banner">
@@ -85,12 +86,12 @@
 				</div>
 				<div class="clearfix"> </div>
 			</div> <!--header -->
-			<div class="top-nav">
+			<!-- <div class="top-nav">
 				<ul class="nav1">
 					<li><a href="<?php echo home_url();?>" class="active">Home</a></li>					
 					<li><a href="gallery.html">Gallery</a></li>						
 				</ul>
 				
-			</div> 
+			</div>  -->
 		</div> <!--container -->
 	</div><!-- banner -->

@@ -5,7 +5,7 @@ Template Name:user_index
 get_header(2);
 
 require_once('page.class.php'); //分页类
-require_once("sidebar.php");
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/search-res/page.css" />
@@ -39,14 +39,13 @@ function user_upload_search($userid){
                             	<div class="row">
                                	<div class="col-md-6 col-info">';
 		echo '<div class="block-area" id="defaultStyle">';
-		// echo '<div id="user_upload_info">';		
 		echo '<table border="0" cellpadding="0" cellspacing="0" width="80%" class="table tile">';
 		echo '<thead>';
 		echo '<tr>';
-		echo '<th class="ev_row" width="30%" >应用名称</th>';
+		echo '<th class="ev_row" width="20%" >应用名称</th>';
 		echo '<th class="ev_row" width="30%"  >文件MD5值</th>';
 		echo '<th class="ev_row" width="30%" >上传时间</th>';
-		echo '<th class="ev_row" width="10%" style="text-align: right;">分析报告</th>';
+		echo '<th class="ev_row" width="10%" >分析报告</th>';
 		echo '<tbody>';
 
 		foreach ($res as $row){	
@@ -54,7 +53,7 @@ function user_upload_search($userid){
 			echo "<td align='left' ><p>".$row->apk_label."</p></td>";
 			echo "<td align='center' ><p>".$row->md5."</p></td>";
 			echo "<td align='center' ><p>".$row->upload_time."</p></td>";
-			echo "<td align='right' ><a href='index.php/search/?md5=".$row->md5."'>查看报告</a></td>";
+			echo "<td align='center' ><a href='index.php/search/?md5=".$row->md5."'>查看报告</a></td>";
 			echo '</tr>';		
 		}
 		echo '</tbody></table></div>';
@@ -65,7 +64,7 @@ function user_upload_search($userid){
 		    echo $page->myde_write();  
 		}  
 		echo '</div>';
-		echo '</div></div></div></div></div>';
+		echo '</div></div></div></div>';
 	}	
 
              echo  '</section> ';
@@ -78,6 +77,8 @@ if ( 0 == $current_user->ID ) {
 	user_upload_search($current_user->ID);
 }
 
-
-get_footer();
+require_once("sidebar.php");
+require_once("sidebar-2.php");
+// 
+// get_footer();
 ?>

@@ -135,10 +135,13 @@ if ($_FILES["file"]["type"] != "application/vnd.android.package-archive"){
 		}						
 	}
 
-	include_once('search_md5.php');
+	require_once("search_md5_page.php");
 	search_md5($md5);
 } 
 
 
-get_footer();
+require_once("sidebar.php");
+require_once("sidebar-2.php");
+
+// get_footer();
 ?>
