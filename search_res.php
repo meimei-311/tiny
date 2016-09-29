@@ -14,10 +14,10 @@
                                             <table class="table tile search-tab">
                                                 <thead>
                                                     <tr>
-                                                        <th style='width:10%; font-size:1.2em;font-weight:bold; font-family:"微软雅黑","黑体";'>基本信息</th>
-                                                        <th style='width:40%'></th> 
-                                                        <th style='width:10%'></th>
-                                                        <th style='width:40%'></th>                                        
+                                                        <th style='text-align: left;width:15%; font-size:1.2em;font-weight:bold; font-family:"微软雅黑","黑体";'>基本信息</th>
+                                                        <th style='width:35%'></th> 
+                                                        <th style='width:15%'></th>
+                                                        <th style='width:35%'></th>                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody>

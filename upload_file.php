@@ -18,7 +18,7 @@ function upload_file($file, $save_dir){
 	// 判断当期目录下的 upload 目录是否存在该文件
 	if (file_exists($save_dir . $file["file"]["name"]))
 	{
-		echo $file["file"]["name"] . " 文件已经存在。 ";		
+		// echo $file["file"]["name"] . " 文件已经存在。 ";		
 		return $file["file"]["name"];		
 	}
 	// 如果没有 upload 目录，你需要创建它，upload 目录权限为 777

@@ -13,19 +13,18 @@
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/templatemo-style.css" type="text/css" media="screen" />
 
- 	<!--timeline-->
-            <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/timeline/lrzj_x.css" type="text/css" />
-            <!--timeline-->
-            
-            <!-- chart -->
-            <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script>
-            <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>
-            <!--end chart -->
-
             <!--upload -->
            <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/animated-header/component.css" />
             <!--endupload-->
+            
+ 	<!--timeline-->
+            <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/timeline/lrzj_x.css" type="text/css" />
+            <!--timeline-->
 
+                    <!-- chart -->
+            <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script>
+            <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>
+            <!--end chart -->
 
 
     <script type="text/javascript">
@@ -87,6 +86,7 @@
                 },160);
                 </script> 
     	</section>
+
 
     <section class="page2" style="top:100%;">
               <div class="page_container">
