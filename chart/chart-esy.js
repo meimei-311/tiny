@@ -36,26 +36,28 @@
                       trigger:"axis",
                       axisPointer:{
                         type:'none'
-                      }
-                        // show: true
+                      },
+                        show: true,
                     },
                toolbox: {
-                      show : true,
+                      show :false,
                       feature : {
-                          mark : {show: true},
-                          dataView : {show: true, readOnly: false},
-                          magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-                          restore : {show: true},
-                          saveAsImage : {show: true}
+                          mark : {show: false},
+                          dataView : {show: false, readOnly: false},
+                          magicType : {show: false, type: ['line', 'bar', 'stack', 'tiled']},
+                          restore : {show: false},
+                          saveAsImage : {show:false}
                       }
                   },
-                   calculable: true,
+                   // calculable: true,
                     grid: {
                         borderWidth: 0,
                         y: 70,
                         y2: 50
                     },
                     legend: {
+                        orient:'vertical',
+                        x:'88%',
                        data:['deprecated',"hide","removed"]
                     },
                     xAxis : [
@@ -89,7 +91,7 @@
                       {
                         normal:{
                           lineStyle:{
-                            color:'#FFFFFF',
+                            color:'#669966',
                           },
                           label:{
                             show:true,
@@ -98,6 +100,7 @@
                               // fontWeight:'bolder',
                               fontSize:20,
                               baseline:'bottom',
+                              color:'#C1FFC1'
                             },
                           },
                         },
@@ -213,6 +216,7 @@
                         return null;
                     }
                 },
+                // animationDuration: 100000,
                 data: [
                     {xAxis:0, y: 480,symbol: icon[0]},
                     {xAxis:1, y: 480 , symbol: icon[1]},
@@ -234,7 +238,8 @@
                     {xAxis:17, y: 480, symbol: icon[17]},
                     {xAxis:18, y: 480, symbol: icon[18]},
                     {xAxis:19, y: 480, symbol: icon[19]},
-                ]
+                ],
+
             }
 
                         },
@@ -243,5 +248,7 @@
                     ]
                 };
                 myChart.setOption(option);
+                // var names=new Array(myChart,option);
+                // return names;
 
               }

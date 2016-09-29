@@ -43,14 +43,12 @@
 <div class="main">
 
 	  <section class="page1" style="top:0%;">
-        
-	                   
                 <div class="page_container">
                     <!--upload-->
-                    <div class="demo-3">               
+                    <div class="demo-3" style="position: relative;bottom: 50px">               
                 <div id="large-header" class="large-header">
                  <canvas id="demo-canvas"></canvas>
-                <h1 class="main-title" onclick="fileSelect();">upload</span></h1>
+                <h1 class="main-title" onclick="fileSelect();">APP检测</span></h1>
                  <form method="post" action="<?php echo home_url();?>/index.php/upload_file/" id="upload-form" enctype="multipart/form-data">   
                     <input type="file" name="file" id="file-upload" onchange="fileSelected();" style="display:none;">
                 </form> 
@@ -61,8 +59,6 @@
                   <script src="<?php bloginfo('template_url'); ?>/animated-header/demo-3.js"></script>
 
                     <!--end upload-->
-
-
 
                 <!-- <img class="normalFace" src="<?php bloginfo('template_url'); ?>/img/upload.png" onclick="fileSelect();"> -->
                 <form method="post" action="<?php echo home_url();?>/index.php/upload_file/" id="upload-form" enctype="multipart/form-data">   
@@ -90,13 +86,11 @@
                     }   
                 },160);
                 </script> 
-               	
-
     	</section>
 
     <section class="page2" style="top:100%;">
-      <div class="page_container">
-           <div id="main_chart" style="height:500px;width:1400px;"></div>
+              <div class="page_container">
+           <div id="main_chart" style="height:500px;width:1400px;position: relative;left:10px;bottom: 100px"></div>
         </div> 
         <script type="text/javascript">
               load_chart();

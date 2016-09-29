@@ -3,9 +3,9 @@
 HOSTNAME='localhost'					#数据库信息
 PORT="3306"
 USERNAME="root"
-PASSWORD="kamejin"
+PASSWORD="1095"
 
-DBNAME="test"                                                       #数据库名称
+DBNAME="wordpress"                                                       #数据库名称
 TABLENAME="wp_madapi_apkinfo"                             #数据库中表的名称
 
 #Create random time

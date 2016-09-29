@@ -39,7 +39,7 @@ Tags: 标签，多个用半角逗号隔开
 }
 
 .set a:link ,a:visited, a:hover, a:active {
-	color: black;
+	color: white;
 }
 
 .tree{

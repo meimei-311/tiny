@@ -4,7 +4,7 @@
 }
  
 a {
-	color: #549688;
+	color: white;
 	text-decoration: none;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -32,11 +32,13 @@ h2 {
 	margin-bottom: 20px;
 }
 #lrzj_x {
-	width: 1000px;
-	height: 350px;
+	width: 1300px;
+	height: 230px;
 	overflow: hidden;
-	margin: 100px auto;
-	position: relative;
+	/*margin: 100px auto;*/
+	position: absolute;
+	top: 450px;
+	left: 70px;
 	background: url('../timeline/dot.gif') left 45px repeat-x;
 }
 #dates {
@@ -66,13 +68,13 @@ h2 {
 	font-size: 20px;
 }
 #lrzj_line {
-	width: 1000px;
-	height: 350px;
+	width: 1300px;
+	height: 230px;
 	overflow: hidden;
 }
 #lrzj_line li {
-	width: 1000px;
-	height: 350px;
+	width: 1300px;
+	height: 230px;
 	list-style: none;
 	float: left;
 }
@@ -103,11 +105,11 @@ h2 {
 }
 #grad_left {
 	left: 0;
-	background: url('../timeline/grad_left.png') repeat-y;
+	/*background: url('../timeline/grad_left.png') repeat-y;*/
 }
 #grad_right {
 	right: 0;
-	background: url('../timeline/grad_right.png') repeat-y;
+	/*background: url('../timeline/grad_right.png') repeat-y;*/
 }
 #next,  #prev {
 	position: absolute;

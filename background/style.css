@@ -39,7 +39,7 @@ h1 {
 }
 
 .main {
-  margin-top: -230px;
+  margin-top: -165px ! important;
 }
 
 .menu {
@@ -56,6 +56,7 @@ h1 {
 
 .main section.page1 {
 background: #7f8c8d;
+background-attachment: scroll;
 }
 
 .main section.page1 .page_container {
@@ -82,10 +83,12 @@ background: #7f8c8d;
 }
 
 .main section.page2 {
-background: #7f8c8d;
+background: #669966;
+background-attachment: scroll;
 }
 .main section.page3 {
-background: #7f8c8d;
+background: #8B7B8B;
+background-attachment: scroll;
 }
 
 .main section.page2 .page_container {

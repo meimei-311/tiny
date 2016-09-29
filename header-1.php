@@ -50,7 +50,7 @@
 			<div class="header">
 				<div class="logo">
 					<a href="<?php echo home_url();?>"> 
-						<img src="<?php bloginfo('template_url'); ?>/background/mad-api.png">
+						<img src="<?php bloginfo('template_url'); ?>/background/147512128760080.png"  height="140" width="800">
 					</a>
 				</div>
 				<div class="icons">
