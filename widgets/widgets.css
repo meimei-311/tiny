@@ -1,9 +1,18 @@
-.side-widgets {
-	margin-left: 30px;
+.side-widgets {	
 	margin-top: 30px;
 	width: 300px;
-	float: left;
+	float: right;
+            margin-right: 8%;
 	position: relative;
+            font-size: 13px;
+}
+.side-widgets2{
+            /*margin-top: 30px;*/
+            width: 300px;
+            float: right;
+            margin-right: 8%;
+            position: relative;
+            font-size: 13px;
 }
 #block-side{
 	position: relative;

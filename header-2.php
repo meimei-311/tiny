@@ -41,7 +41,8 @@
 	get_currentuserinfo();
 ?>
 
-<body class="demo2">
+<body>
+<div class="view-body">
 
 	<!-- banner -->
 	<div class="banner">
