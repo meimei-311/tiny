@@ -272,6 +272,8 @@ img {
 
 body {
     background-image: url(./blue.jpg) ;
+    background-attachment: fixed;
+    /*background: #CDB38B;*/
 }
     
  

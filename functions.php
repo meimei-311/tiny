@@ -28,7 +28,7 @@ function arphabet_widgets_init() {
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
-
+/*wpdb-select-deprecated*/
 function select_deprecated(){
 	if( isset($_POST['action']) && ($_POST['action'] == 'select_deprecated') ){
 global $wpdb; 
@@ -99,6 +99,8 @@ die(0);
 // selectDB_deprecated();
 add_action("wp_ajax_select_deprecated", "select_deprecated"); 
 add_action("wp_ajax_nopriv_select_deprecated", "select_deprecated"); 
+
+
 
 /*remove top admin bar */
 if (!current_user_can('manage_options')) {
