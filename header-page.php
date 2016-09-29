@@ -2,6 +2,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/background/default.css" />
 		
 	<!-- Edit Below -->
+    
 	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
 	    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.js"></script>
 	    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/background/jquery.onepage-scroll.js"></script>
