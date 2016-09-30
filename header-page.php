@@ -25,6 +25,7 @@
                     <!-- chart -->
             <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script>
             <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>
+            <script src="<?php bloginfo('template_url'); ?>/chart/timerank.js"></script>
             <!--end chart -->
 
 
@@ -102,9 +103,16 @@
 
     <section class="page3" style="top:200%;">
       <div class="page_container">
+
+        <div id="main_chart_timerank" style="height:300px;width:1400px;position: relative;left:-260px;bottom: 100px"></div>
+        <script type="text/javascript">
+              load_chart_timerank();
+        </script>
+
       <div class="time_line">
       <?php include_once("timeline.php");?>
       </div>
+
     </div>
     </section>
 
