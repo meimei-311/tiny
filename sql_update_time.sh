@@ -12,9 +12,9 @@ TABLENAME="wp_madapi_apkinfo"                             #数据库中表的名
 random_date()
 {	
 	fomat_time[0]=2016
-	fomat_time[1]=$(($RANDOM%8+1))
-	fomat_time[2]=$(($RANDOM%27+1))
-	fomat_time[3]=$(($RANDOM%20+1))
+	fomat_time[1]=$(($RANDOM%9+1))
+	fomat_time[2]=$(($RANDOM%30+1))
+	fomat_time[3]=$(($RANDOM%23+1))
 	fomat_time[4]=$(($RANDOM%59+1))
 	fomat_time[5]=$(($RANDOM%59+1))
 
@@ -31,7 +31,7 @@ random_date()
 
 
 #update upload_time with random_date
-select_sql="select md5 from ${TABLENAME};"
+select_sql="select md5 from ${TABLENAME} WHERE upload_time NOT LIKE '2016-10-%';"
 res=`mysql -h${HOSTNAME}  -P${PORT}  -u${USERNAME} -p${PASSWORD} ${DBNAME} -e "${select_sql}"`
 for md5 in ${res[@]};
 do

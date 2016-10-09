@@ -66,7 +66,7 @@
                                                 <p>
                                                     <canvas id="myCanvas" width="500" height="100" percent="
                                                     <?php 
-                                                        if ($res->sum_number > 0){
+                                                        if ($res->sum_number >= 0){
                                                             echo $rank;
                                                             // echo 75;
                                                         }else{
