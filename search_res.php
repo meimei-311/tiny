@@ -66,8 +66,9 @@
                                                 <p>
                                                     <canvas id="myCanvas" width="500" height="100" percent="
                                                     <?php 
-                                                        if ($res->number_deprecated+$res->number_hide+$res->number_removed > 0){
-                                                            echo 75;
+                                                        if ($res->sum_number > 0){
+                                                            echo $rank;
+                                                            // echo 75;
                                                         }else{
                                                             echo 0;
                                                         }
