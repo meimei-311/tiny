@@ -187,7 +187,7 @@ function progressText(ctx, x, y, width, height, radius, max) {
     ctx.save();
     ctx.fillStyle = 'white';
     // var text = Math.floor(width/max*100)+"%";
-    var text = "安全指数";
+    var text = "危险指数";
     var text_width = ctx.measureText(text).width;
     var text_x = x+width-text_width-radius/2;
     if (width<=radius+text_width) {

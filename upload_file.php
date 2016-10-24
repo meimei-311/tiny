@@ -10,7 +10,7 @@ get_header(2);
 <?php
 $save_dir="./MAD-API/upload/";
 
-
+//上传文件
 function upload_file($file, $save_dir){	
 	if ($file["file"]["error"] > 0){		
 		echo "文件上传错误！";
@@ -33,7 +33,7 @@ function upload_file($file, $save_dir){
 	return $file["file"]["name"];
 }
 
-
+//执行检测并将结果存至数据库
 function deal_mad_api($file_dir, $filename){	
 	global $wpdb; 
 	$file_path = $file_dir.$filename;	
@@ -41,7 +41,7 @@ function deal_mad_api($file_dir, $filename){
 	$size_apk = sprintf("%.2f",filesize($file_path)/(1024*1024));	
 	$filename1=substr($filename,0,-4);
 
-	$output = exec("MAD-API/getMinTargetLevel.sh $filename $filename1 2>&1");//只有失败的时候返回NULL
+	$output = exec("MAD-API/getMinTargetLevel.sh $filename $filename1 2>&1");//运行shell脚本执行检测
 
 	$number_location="./MAD-API/result/".$filename1."/number.txt";
 	$handle = fopen($number_location, 'r');
@@ -118,7 +118,7 @@ function deal_mad_api($file_dir, $filename){
 	unlink($apkpath);
 }
 
-
+//md5判断
 $md5;
 if ($_FILES["file"]["type"] != "application/vnd.android.package-archive"){
 	echo "<script language=javascript>alert('".$_FILES["file"]["type"]." is wrong type mei!');history.back();</script>";	
@@ -129,7 +129,8 @@ if ($_FILES["file"]["type"] != "application/vnd.android.package-archive"){
 		$md5 =  md5_file($save_dir.$filename);
 		global $wpdb;
 		$table='wp_madapi_apkinfo';			
-		$md5_num = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table WHERE md5='$md5';",""));		
+		$md5_num = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table WHERE md5='$md5';",""));
+		//如果数据库中没有现成报告，则执行检测函数
 		if ($md5_num == 0){
 			$res = deal_mad_api($save_dir, $filename);
 		}						

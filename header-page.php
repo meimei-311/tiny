@@ -22,7 +22,7 @@
             <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/timeline/lrzj_x.css" type="text/css" />
             <!--timeline-->
 
-                    <!-- chart -->
+            <!-- chart -->
             <script src="<?php bloginfo('template_url'); ?>/chart/echarts-all.js"></script>
             <script src="<?php bloginfo('template_url'); ?>/chart/chart-esy.js"></script>
             <script src="<?php bloginfo('template_url'); ?>/chart/timerank.js"></script>
@@ -61,10 +61,10 @@
 
                     <!--end upload-->
 
-                <!-- <img class="normalFace" src="<?php bloginfo('template_url'); ?>/img/upload.png" onclick="fileSelect();"> -->
+                <!-- <img class="normalFace" src="<?php bloginfo('template_url'); ?>/img/upload.png" onclick="fileSelect();"> 
                 <form method="post" action="<?php echo home_url();?>/index.php/upload_file/" id="upload-form" enctype="multipart/form-data">   
                     <input type="file" name="file" id="file-upload" onchange="fileSelected();" style="display:none;">
-                </form>               
+                </form>      
                 <div class="total" >
                 <p class="total-txt">总共有<span id="total-num" >0</span>个报告</p>
                 </div> </div>
@@ -87,6 +87,7 @@
                     }   
                 },160);
                 </script> 
+                -->
     	</section>
 
 

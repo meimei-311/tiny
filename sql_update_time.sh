@@ -32,6 +32,7 @@ random_date()
 
 #update upload_time with random_date
 select_sql="select md5 from ${TABLENAME} WHERE upload_time NOT LIKE '2016-10-%';"
+#select_sql="select md5 from ${TABLENAME};"
 res=`mysql -h${HOSTNAME}  -P${PORT}  -u${USERNAME} -p${PASSWORD} ${DBNAME} -e "${select_sql}"`
 for md5 in ${res[@]};
 do
