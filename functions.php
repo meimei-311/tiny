@@ -147,6 +147,22 @@ function timerank(){
 add_action("wp_ajax_timerank", "timerank"); 
 add_action("wp_ajax_nopriv_timerank", "timerank"); 
 
+/*progressbar*/
+function progressbar(){
+	if( isset($_POST['action']) && ($_POST['action'] == 'progressbar') ){
+		    $io = 5;
+		    for($i=0;$i<=$io;$i++)
+		    {
+		     $io= rand(50,100);
+		    }
+    	echo $io;
+	}
+	die(0);
+}
+
+add_action("wp_ajax_progressbar", "progressbar"); 
+add_action("wp_ajax_nopriv_progressbar", "progressbar"); 
+
 
 /*remove top admin bar */
 if (!current_user_can('manage_options')) {

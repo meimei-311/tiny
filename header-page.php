@@ -14,6 +14,11 @@
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/templatemo-style.css" type="text/css" media="screen" />
 
+                <!-- <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/progressbar/progressbar_style.css" type="text/css" /> -->
+                <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/progressbar/reset.css" />
+                <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/progressbar/progressbar.css" />
+                <script src="<?php bloginfo('template_url'); ?>/progressbar/prefixfree.min.js"></script>
+
             <!--upload -->
            <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/animated-header/component.css" />
             <!--endupload-->
@@ -35,6 +40,18 @@
     }
     function fileSelected(){
         document.getElementById('upload-form').submit();        
+        
+        var loading = document.getElementById('loading');
+        var popLayer = document.getElementById('popLayer');
+
+        popLayer.style.width = document.body.scrollWidth + "px";
+        popLayer.style.height = document.body.scrollHeight + "px";
+
+        // loading.show();
+        // popLayer.show();
+        $("#loading").show(); 
+        popLayer.style.display = "block";
+        // loading.style.display = "block";
     }
     </script>
 
@@ -88,6 +105,21 @@
                 },160);
                 </script> 
                 -->
+            </div>
+<div id="popLayer"></div>
+ <div id="loading" >
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <p>detecting</p>
+</div>
+<script type="text/javascript"> 
+$("#loading").hide(); 
+</script>
+
     	</section>
 
 
